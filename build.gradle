@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.ejemplo.reactivo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.projectreactor', name: 'reactor-core', version: '3.7.0'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
